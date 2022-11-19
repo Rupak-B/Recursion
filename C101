@@ -1,0 +1,55 @@
+// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+let n = 7
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
+
+
+
+//This does the intial counting down to 1
+func countDown(from target: Int) -> Int {
+    if(target < 1) {
+        return 1
+    } else {
+
+        print("Calculating factorial(\(target))...")
+        return countDown(from: target - 1)
+    }
+}
+
+//Used to go down each branch of the factorial
+func branch(from target: Int) -> Int {
+    if(target < 1) {
+        return 1
+    } else {
+
+
+        return target*branch(from: target - 1)
+    }
+}
+
+
+//changing n to a var varible (x)
+var x = n
+
+//invoking the function and printing the neccessary steps
+print("Calculating factorial(\(n))...")
+print("Terminal case, returning \(countDown(from : x-1)).")
+
+//factorial going back up
+func facUp(from goal: Int) -> Int {
+    if(goal > n) {
+        return 1
+    } else {
+        print("Non-terminal case, returning \(goal*branch(from: goal - 1)).")
+        return goal*facUp(from: goal + 1)
+    }
+}
+
+//Determines if the factorial needs to be calculated or is simply 1
+if n > 1 {
+    print("The final result is: \(facUp(from: 2)).")
+}
+else {
+    print("The final result is: 1.")
+}
