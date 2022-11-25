@@ -45,7 +45,7 @@ func facUp(from goal: Int) -> Int {
         return goal*facUp(from: goal + 1)
     }
 }
-
+func run() {
 //Determines if the factorial needs to be calculated or is simply 1
 if n > 1 {
     print("The final result is: \(facUp(from: 2)).")
@@ -53,3 +53,5 @@ if n > 1 {
 else {
     print("The final result is: 1.")
 }
+}
+run()
