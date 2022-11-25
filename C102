@@ -6,9 +6,9 @@ let n = 7
 
 
 // Add your code below:
-func call() {
+
 //if the function is simple and has a answer of 1
-    if(n<=1) {
+
 func countDown(from target: Int) -> Int {
     if(target <= 1) {
         return 1
@@ -19,12 +19,7 @@ func countDown(from target: Int) -> Int {
     }
 }
 
-print("Calculating fibonacci(\(n))...")        
 
-print("Terminal case, returning \(countDown(from: n-1)).")
-print("The final result is: \(1).")
-
-}
 
 if (n>1) {
 func fib(int: Int) -> Int {
@@ -48,10 +43,17 @@ func fib(int: Int) -> Int {
         return new
     }
 }
+}
+func call() {
+    if(n<=1) {
+print("Calculating fibonacci(\(n))...")        
 
-print("The final result is: \(fib(int:n)).")
+print("Terminal case, returning \(countDown(from: n-1)).")
+print("The final result is: \(1).")
 
 }
+print("The final result is: \(fib(int:n)).")
+
 }
 //the main function being called
 call()
